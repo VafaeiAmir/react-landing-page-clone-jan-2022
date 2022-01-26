@@ -4,8 +4,7 @@ import './App.css';
 import { css } from '@emotion/react';
 import { ReactComponent as Svg } from './image.svg';
 import { ReactComponent as Svg2 } from './image2.svg';
-
-// import { ReactComponent as Svg3 } from '/image3.svg';
+import FirstImage from './image3.png';
 
 // import { getByDisplayValue } from '@testing-library/react';
 
@@ -80,11 +79,16 @@ const icon2Style = css`
   left: 820px;
   overflow: hidden;
 `;
-const icon3Style = css`
-  display: flex;
+/* const icon3Style = css`
   position: absolute;
-  bottom: 180px;
-`;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  transition: opacity 500ms ease 500ms;
+`;*/
+
 const buttonGetStyle = css`
   font-size: 16px;
   background: white;
@@ -107,7 +111,7 @@ const buttonSignStyle = css`
 const mainTextStyle = css`
   display: flex;
   position: absolute;
-  top: 2px;
+  top: 0px;
   left: 79px;
   font-size: 8.5rem;
   max-width: 90%;
@@ -128,7 +132,7 @@ const down1ButtonStyle = css`
   font-size: 22px;
   font-weight: 600;
   background: white;
-  color: black;
+  // color: black;
   padding: 20px 60px;
   border-radius: 30px;
   bottom: 80px;
@@ -157,6 +161,19 @@ const down2ButtonStyle = css`
   transition: 0.3s ease;
 `;
 
+const secondSectionStyle = css`
+  display: flex;
+  bottom: 30px;
+  left: 450px;
+`;
+const image3Style = css`
+  position: absolute;
+  left: 160px;
+  top: 700px;
+  width: 80%;
+  height: 110%;
+`;
+
 function App() {
   return (
     <div>
@@ -174,19 +191,24 @@ function App() {
             <button css={buttonGetStyle}>Get Started</button>
             <button css={buttonSignStyle}>Sign In</button>
           </div>
-        </nav>
+        </nav>{' '}
+        <div>
+          <h1 css={mainTextStyle}>Explore Islands, Together</h1>
+        </div>
+        <div>
+          <h1 css={h2Style}>Islands is your passport to the metaverse</h1>
+        </div>
+        <div>
+          <button css={down1ButtonStyle}>Get Started</button>
+          <button css={down2ButtonStyle}>Play video</button>
+          <Svg2 src css={icon2Style} />
+        </div>
       </section>
-      <div>
-        <h1 css={mainTextStyle}>Explore Islands, Together</h1>
-      </div>
-      <div>
-        <h1 css={h2Style}>Islands is your passport to the metaverse</h1>
-      </div>
-      <div>
-        <button css={down1ButtonStyle}>Get Started</button>
-        <button css={down2ButtonStyle}>Play video</button>
-        <Svg2 css={icon2Style} />
-      </div>
+      <section css={secondSectionStyle}>
+        <div>
+          <img css={image3Style} src={FirstImage} alt="foto" />
+        </div>
+      </section>
     </div>
   );
 }
