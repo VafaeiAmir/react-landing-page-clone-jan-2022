@@ -5,6 +5,7 @@ import { css } from '@emotion/react';
 import { ReactComponent as Svg } from './image.svg';
 import { ReactComponent as Svg2 } from './image2.svg';
 import FirstImage from './image3.png';
+import SecondImage from './image4.png';
 
 // import { getByDisplayValue } from '@testing-library/react';
 
@@ -111,6 +112,7 @@ const buttonSignStyle = css`
 const mainTextStyle = css`
   display: flex;
   position: absolute;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   top: 0px;
   left: 79px;
   font-size: 8.5rem;
@@ -173,6 +175,33 @@ const image3Style = css`
   width: 80%;
   height: 110%;
 `;
+const secondTextStyle = css`
+  display: flex;
+  position: absolute;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  top: 1450px;
+  left: 590px;
+  font-size: 4rem;
+  max-width: 90%;
+  text-align: center;
+`;
+const thirdTextStyle = css`
+  display: flex;
+  position: absolute;
+  color: gray;
+  top: 1700px;
+  left: 290px;
+  font-size: 0.9rem;
+  max-width: 90%;
+  text-align: center;
+`;
+const image4Style = css`
+  position: absolute;
+  left: 160px;
+  top: 1850px;
+  width: 80%;
+  height: 110%;
+`;
 
 function App() {
   return (
@@ -207,6 +236,20 @@ function App() {
       <section css={secondSectionStyle}>
         <div>
           <img css={image3Style} src={FirstImage} alt="foto" />
+        </div>
+        <div css={secondTextStyle}>
+          <h1>Gallery</h1>
+        </div>
+        <div css={thirdTextStyle}>
+          <h1>
+            A social profile for all your NFTs regardless of which wallet or
+            blockchain they are issued on.
+          </h1>
+        </div>
+      </section>
+      <section>
+        <div>
+          <img css={image4Style} src={SecondImage} alt="foto" />
         </div>
       </section>
     </div>
