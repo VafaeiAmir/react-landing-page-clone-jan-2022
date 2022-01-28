@@ -2,10 +2,11 @@
 
 import './App.css';
 import { css } from '@emotion/react';
-import { ReactComponent as Svg } from './image.svg';
 import { ReactComponent as Svg2 } from './image2.svg';
 import FirstImage from './image3.png';
 import SecondImage from './image4.png';
+import thirdImage from './image5.png';
+import { ReactComponent as Svg } from './logo1.svg';
 
 // import { getByDisplayValue } from '@testing-library/react';
 
@@ -14,51 +15,36 @@ const navigationStyle = css`
   top: 20px;
   left: 0;
   right: 0;
-  max-width: 200;
-  padding: 1px 160px;
+  max-width: 1350px;
+  padding: 0 70px;
   margin: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
 `;
-const navHomeStyle = css`
+const allNavStyle = css`
   display: flex;
-  top: 12px;
-  right: 600px;
-  position: absolute;
-  margin: auto;
-  font-weight: 600;
-  box-sizing: border-box;
   align-items: center;
   justify-content: space-between;
+`;
+
+const navHomeStyle = css`
+  left: 759px;
+  position: absolute;
 `;
 const navMediaStyle = css`
-  display: flex;
-  top: 12px;
-  right: 515px;
+  right: 450px;
   position: absolute;
-  margin: auto;
-  font-weight: 600;
-  box-sizing: border-box;
   color: grey;
-  align-items: center;
-  justify-content: space-between;
   transition: 0.3s ease;
   :hover {
     color: black;
   }
 `;
 const navCareerStyle = css`
-  display: flex;
-  top: 12px;
-  right: 430px;
+  right: 350px;
   position: absolute;
-  margin: auto;
-  font-weight: 600;
-  box-sizing: border-box;
   color: grey;
-  align-items: center;
-  justify-content: space-between;
   transition: 0.3s ease;
   :hover {
     color: black;
@@ -80,15 +66,6 @@ const icon2Style = css`
   left: 820px;
   overflow: hidden;
 `;
-/* const icon3Style = css`
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 100%;
-  height: 100%;
-  opacity: 1;
-  transition: opacity 500ms ease 500ms;
-`;*/
 
 const buttonGetStyle = css`
   font-size: 16px;
@@ -114,7 +91,7 @@ const mainTextStyle = css`
   position: absolute;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   top: 0px;
-  left: 79px;
+  left: 75px;
   font-size: 8.5rem;
   max-width: 90%;
   text-align: center;
@@ -124,7 +101,7 @@ const h2Style = css`
   display: flex;
   position: absolute;
   bottom: 180px;
-  left: 460px;
+  left: 450px;
   color: grey;
 `;
 
@@ -138,7 +115,7 @@ const down1ButtonStyle = css`
   padding: 20px 60px;
   border-radius: 30px;
   bottom: 80px;
-  left: 490px;
+  left: 480px;
 `;
 const down2ButtonStyle = css`
   display: flex;
@@ -150,9 +127,7 @@ const down2ButtonStyle = css`
   padding: 20px 60px;
   border-radius: 30px;
   bottom: 80px;
-  left: 800px;
-  overflow: hidden;
-  background-color: #ff3cac;
+  left: 795px;
   background-image: linear-gradient(
     225deg,
     #27d86c 0%,
@@ -167,7 +142,10 @@ const secondSectionStyle = css`
   display: flex;
   bottom: 30px;
   left: 450px;
+  align-items: center;
+  margin: auto;
 `;
+
 const image3Style = css`
   position: absolute;
   left: 160px;
@@ -175,22 +153,43 @@ const image3Style = css`
   width: 80%;
   height: 110%;
 `;
-const secondTextStyle = css`
+const line2TextStyle = css`
   display: flex;
   position: absolute;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  top: 1450px;
+  top: 1440px;
   left: 590px;
   font-size: 4rem;
   max-width: 90%;
   text-align: center;
 `;
-const thirdTextStyle = css`
+const line3TextStyle = css`
   display: flex;
   position: absolute;
   color: gray;
-  top: 1700px;
+  top: 1680px;
   left: 290px;
+  font-size: 0.9rem;
+  max-width: 90%;
+  text-align: center;
+`;
+const line4TextStyle = css`
+  display: flex;
+  position: absolute;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  top: 2600px;
+  left: 530px;
+  font-size: 4rem;
+  max-width: 90%;
+  text-align: center;
+`;
+
+const line5TextStyle = css`
+  display: flex;
+  position: absolute;
+  color: gray;
+  top: 2840px;
+  left: 320px;
   font-size: 0.9rem;
   max-width: 90%;
   text-align: center;
@@ -199,6 +198,13 @@ const image4Style = css`
   position: absolute;
   left: 160px;
   top: 1850px;
+  width: 80%;
+  height: 110%;
+`;
+const image5Style = css`
+  position: absolute;
+  left: 160px;
+  top: 3000px;
   width: 80%;
   height: 110%;
 `;
@@ -211,7 +217,7 @@ function App() {
           <div css={logoStyle}>
             <Svg css={iconStyle} />
           </div>
-          <nav>
+          <nav css={allNavStyle}>
             <p css={navHomeStyle}>Home</p>
             <p css={navMediaStyle}>Media</p>
             <p css={navCareerStyle}>Careers</p>
@@ -237,10 +243,10 @@ function App() {
         <div>
           <img css={image3Style} src={FirstImage} alt="foto" />
         </div>
-        <div css={secondTextStyle}>
+        <div css={line2TextStyle}>
           <h1>Gallery</h1>
         </div>
-        <div css={thirdTextStyle}>
+        <div css={line3TextStyle}>
           <h1>
             A social profile for all your NFTs regardless of which wallet or
             blockchain they are issued on.
@@ -250,6 +256,20 @@ function App() {
       <section>
         <div>
           <img css={image4Style} src={SecondImage} alt="foto" />
+        </div>
+        <div css={line4TextStyle}>
+          <h1>Storefront</h1>
+        </div>
+        <div css={line5TextStyle}>
+          <h1>
+            Storefront aggregation across all your favorite marketplaces
+            starting with OpenSea.
+          </h1>
+        </div>
+      </section>
+      <section>
+        <div>
+          <img css={image5Style} src={thirdImage} alt="foto" />
         </div>
       </section>
     </div>
