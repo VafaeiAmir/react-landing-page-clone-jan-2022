@@ -5,7 +5,8 @@ import { css } from '@emotion/react';
 import { ReactComponent as Svg2 } from './image2.svg';
 import FirstImage from './image3.png';
 import SecondImage from './image4.png';
-import thirdImage from './image5.png';
+import ThirdImage from './image5.png';
+import FourthImage from './image6.png';
 import { ReactComponent as Svg } from './logo1.svg';
 
 // import { getByDisplayValue } from '@testing-library/react';
@@ -50,16 +51,8 @@ const navCareerStyle = css`
     color: black;
   }
 `;
-const logoStyle = css`
-  font-size: 1.5rem;
-  display: flex;
-  align-items: center;
-`;
-const iconStyle = css`
-  height: 28px;
-  width: 32px;
-`;
-const icon2Style = css`
+
+const icon1Style = css`
   display: flex;
   position: absolute;
   bottom: 100px;
@@ -111,7 +104,6 @@ const down1ButtonStyle = css`
   font-size: 22px;
   font-weight: 600;
   background: white;
-  // color: black;
   padding: 20px 60px;
   border-radius: 30px;
   bottom: 80px;
@@ -137,6 +129,18 @@ const down2ButtonStyle = css`
   z-index: -1;
   transition: 0.3s ease;
 `;
+const down3ButtonStyle = css`
+  display: flex;
+  position: absolute;
+  font-size: 18px;
+  font-weight: 600;
+  background: blue;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 30px;
+  top: 4000px;
+  left: 650px;
+`;
 
 const secondSectionStyle = css`
   display: flex;
@@ -146,7 +150,7 @@ const secondSectionStyle = css`
   margin: auto;
 `;
 
-const image3Style = css`
+const image2Style = css`
   position: absolute;
   left: 160px;
   top: 700px;
@@ -194,17 +198,45 @@ const line5TextStyle = css`
   max-width: 90%;
   text-align: center;
 `;
-const image4Style = css`
+const line6TextStyle = css`
+  display: flex;
+  position: absolute;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  top: 3700px;
+  left: 580px;
+  font-size: 4rem;
+  max-width: 90%;
+  text-align: center;
+`;
+
+const line7TextStyle = css`
+  display: flex;
+  position: absolute;
+  color: gray;
+  top: 3900px;
+  left: 480px;
+  font-size: 0.9rem;
+  max-width: 90%;
+  text-align: center;
+`;
+const image3Style = css`
   position: absolute;
   left: 160px;
   top: 1850px;
   width: 80%;
   height: 110%;
 `;
-const image5Style = css`
+const image4Style = css`
   position: absolute;
   left: 160px;
   top: 3000px;
+  width: 80%;
+  height: 110%;
+`;
+const image5Style = css`
+  position: absolute;
+  left: 160px;
+  top: 4100px;
   width: 80%;
   height: 110%;
 `;
@@ -214,8 +246,8 @@ function App() {
     <div>
       <section>
         <nav css={navigationStyle}>
-          <div css={logoStyle}>
-            <Svg css={iconStyle} />
+          <div>
+            <Svg />
           </div>
           <nav css={allNavStyle}>
             <p css={navHomeStyle}>Home</p>
@@ -236,12 +268,12 @@ function App() {
         <div>
           <button css={down1ButtonStyle}>Get Started</button>
           <button css={down2ButtonStyle}>Play video</button>
-          <Svg2 src css={icon2Style} />
+          <Svg2 src css={icon1Style} />
         </div>
       </section>
       <section css={secondSectionStyle}>
         <div>
-          <img css={image3Style} src={FirstImage} alt="foto" />
+          <img css={image2Style} src={FirstImage} alt="foto" />
         </div>
         <div css={line2TextStyle}>
           <h1>Gallery</h1>
@@ -255,7 +287,7 @@ function App() {
       </section>
       <section>
         <div>
-          <img css={image4Style} src={SecondImage} alt="foto" />
+          <img css={image3Style} src={SecondImage} alt="foto" />
         </div>
         <div css={line4TextStyle}>
           <h1>Storefront</h1>
@@ -269,7 +301,19 @@ function App() {
       </section>
       <section>
         <div>
-          <img css={image5Style} src={thirdImage} alt="foto" />
+          <img css={image4Style} src={ThirdImage} alt="foto" />
+        </div>
+        <div css={line6TextStyle}>
+          <h1>Threads</h1>
+        </div>
+        <div css={line7TextStyle}>
+          <h1>Token-gated threads to keep up with verified owners.</h1>
+        </div>
+        <button css={down3ButtonStyle}>Comming soon</button>
+      </section>
+      <section>
+        <div>
+          <img css={image5Style} src={FourthImage} alt="foto" />
         </div>
       </section>
     </div>
